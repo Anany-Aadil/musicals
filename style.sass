@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Fira+Sans:wght@100;200;300&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&family=Noto+Sans+Mono:wght@300&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Recursive:wght@300&display=swap')
+
+*
+  margin: 0rem
+  padding: 0rem
+  transition: all
+  transition-duration: 150ms
+  transition-timing-function: linear
+
+body
+  background: linear-gradient(rgba(193, 193, 240, 0.95), rgba(200, 209, 236, 0.95)), url('../../public/assets/play.gif')
+
+a
+  text-decoration: none
+  color: aliceblue
+
+.pointer
+  cursor: pointer
+
+@media (min-width: 1250px)
+  .container
+    background-size: 100%
+
+@media (max-width: 1200px)
+  #gif2 .sPname
+    transform: scale(0)
+
+@media (max-width: 900px)
+  span.sPname
+    transform: scale(0)
+
+@media (max-width: 650px)
+  div.container
+    background-image: url('../../public/assets/bg2.jpg')
+
+@media (max-width: 600px)
+  .songItem .jSName, .timeStamp
+    font-family: 'Dancing Script', cursive
+    font-size: 0.8rem
+
+@media (max-width: 385px)
+  #loop
+    margin-left: 10px
+
+  .iconRow
+    padding-left: 3rem
+
+/* The Main Navigation Bar ------------------------------
+
+nav
+  font-family: 'Noto Sans Mono', monospace
+  font-weight: bold
+  width: 100%
+
+.brand
+  display: flex
+  align-items: center
+  font-weight: bolder
+  font-size: 1.3rem
+
+  img
+    width: 3rem
+    padding: 0 0.5rem
+
+  span
+    font-family: 'Andada Pro', sans-serif
+
+nav ul
+  display: flex
+  list-style-type: none
+  align-items: center
+  height: 4rem
+  background-color: rgb(34, 2, 2)
+  color: aliceblue
+
+  li
+    padding: 0 0.75rem
+
+.btn
+  display: flex
+  border-radius: 0
+
+  &:hover
+    border-radius: 1rem
+    background-color: rgb(63, 17, 17)
+    cursor: pointer
+
+/* The Main Body of the Page + Songs List --------------------------------
+
+.container
+  min-height: 65vh
+  background-color: #00000c
+  color: rgb(231, 180, 180)
+  font-family: 'Recursive', sans-serif
+  display: flex
+  margin: 0.5rem auto
+  width: 70vw
+  border-radius: 3rem
+  padding: 0.5rem
+  background-image: url('../../public/assets/bg.jpg')
+
+.songsList
+  margin: 0.75rem
+
+.songContainer
+  margin-top: 1.25rem
+
+.songItem
+  height: 2.5rem
+  display: flex
+  background-color: rgb(255, 221, 189)
+  color: rgb(14, 16, 121)
+  justify-content: space-between
+  align-items: center
+  font-size: 1rem
+  border-radius: 1rem
+  margin: 0.5rem 0
+  font-family: 'Ephesis', cursive
+  font-weight: bolder
+
+  img
+    width: 3.5rem
+    border-radius: 1rem
+    margin: 0px 0.25rem
+
+.img:hover
+  border-radius: 0.25rem
+
+.jSName
+  font-size: 1.2rem
+
+.timeStamp
+  margin: 0rem 0.8rem
+
+i.songItemPlay:hover
+  color: black
+
+/* The Bottom Bar + Audio Controls ----------------------------------
+
+.Bottom
+  position: fixed
+  width: 100%
+  bottom: 0rem
+  height: 6rem
+  background-color: rgb(3, 17, 1)
+  color: rgb(235, 254, 255)
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+#mainProgressBar
+  width: 80vw
+  transform: translateY(0.5rem)
+
+.iconRow
+  display: flex
+  flex-direction: row
+  padding-left: 7vw
+
+.icons
+  margin: 0.5rem 0
+  padding: 0rem 0.1rem
+  display: flex
+  color: rgb(255, 229, 189)
+  justify-content: center
+  flex-direction: row
+  align-items: center
+
+  i
+    cursor: pointer
+    padding: 0rem 0.125rem
+
+.btns:hover
+  color: rgb(139, 125, 165)
+
+#vol
+  transform: translateY(0.78rem)
+  padding-left: 0.25rem
+  color: rgb(255, 209, 183)
+
+  &:hover
+    color: rgb(139, 125, 165)
+    transform: translateY(0)
+
+#volumeBar
+  transform: scale(0)
+  opacity: 0
+  position: relative
+  margin-top: 0.5rem
+  margin-left: 0.125rem
+  width: 5rem
+  display: flex
+  align-items: center
+
+#vol:hover #volumeBar
+  opacity: 1
+  transform: scale(1)
+  transition: linear 200ms
+  transform-origin: left
+
+i#loop
+  margin-left: 6vw
+
+#checkMark
+  transform: translateX(-2rem)
+  color: rgb(34, 231, 34)
+  z-index: -1
+  opacity: 0
+  transition: 50ms
+
+#gif1
+  left: 10vw
+
+#gif2
+  right: 10vw
+
+.gifs
+  position: absolute
+  opacity: 0
+  transition: opacity 0.7s ease
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+.gifPlay
+  padding-top: 0.25rem
+  border-radius: 0.5rem
+  width: 2rem
+
+span.sPname
+  justify-content: center
+  align-items: center
+  font-family: 'Andada', Tahoma, Verdana, sans-serif
+  padding: 0rem 0.25rem
